@@ -26,7 +26,7 @@ const FloatingChat = () => {
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-2">
                   <MessageCircle className="h-5 w-5" />
-                  <span className="font-semibold">Travel Assistant</span>
+                  <span className="font-semibold">Travel + Evans Assistant</span>
                 </div>
                 <Button
                   variant="ghost"
@@ -46,7 +46,7 @@ const FloatingChat = () => {
                 <div className="space-y-2">
                   <div className="bg-muted p-3 rounded-lg">
                     <p className="text-sm">
-                      👋 Hello! I'm here to help you with your travel needs. How can I assist you today?
+                      👋 Habari! I'm here to help you with your Tanzania travel needs. From visas to flights, how can I assist you today?
                     </p>
                   </div>
                 </div>

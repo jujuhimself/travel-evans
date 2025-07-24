@@ -8,6 +8,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Textarea } from "@/components/ui/textarea";
 import { Link } from "react-router-dom";
 import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
 
 const VisaBooking = () => {
   const [currentStep, setCurrentStep] = useState(1);
@@ -336,6 +337,7 @@ const VisaBooking = () => {
           )}
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

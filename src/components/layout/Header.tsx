@@ -8,17 +8,23 @@ const Header = () => {
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2 group">
+          <Link to="/" className="flex items-center space-x-3 group">
             <div className="gradient-sky p-2 rounded-lg shadow-soft group-hover:shadow-glow transition-smooth">
               <Plane className="h-6 w-6 text-white" />
             </div>
-            <span className="text-xl font-bold text-foreground">
-              TravelEase
+            <span className="text-xl font-display font-bold text-foreground">
+              Travel + Evans
             </span>
           </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-6">
+            <Link 
+              to="/" 
+              className="text-muted-foreground hover:text-foreground transition-smooth font-medium"
+            >
+              Home
+            </Link>
             <Link 
               to="/bookings" 
               className="text-muted-foreground hover:text-foreground transition-smooth font-medium"

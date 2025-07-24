@@ -2,38 +2,38 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Travel-themed design system with sky blues, warm creams, and sunset accents
-All colors MUST be HSL.
+/* Travel + Evans design system - Premium Tanzania travel experience
+Colors: Sky blue, warm beige, deep green, white. All colors MUST be HSL.
 */
 
 @layer base {
   :root {
-    /* Base colors - clean whites and soft backgrounds */
-    --background: 210 20% 98%;
-    --foreground: 215 25% 15%;
+    /* Base colors - clean whites and warm beige backgrounds */
+    --background: 43 37% 97%;  /* Warm beige background */
+    --foreground: 140 20% 15%; /* Deep green foreground */
 
     /* Card and surface colors */
-    --card: 0 0% 100%;
-    --card-foreground: 215 25% 15%;
+    --card: 0 0% 100%;  /* Pure white cards */
+    --card-foreground: 140 20% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 215 25% 15%;
+    --popover-foreground: 140 20% 15%;
 
-    /* Primary - Sky blue theme */
-    --primary: 210 85% 45%;
+    /* Primary - Sky blue (#00BFFF) */
+    --primary: 195 100% 50%;
     --primary-foreground: 0 0% 100%;
-    --primary-glow: 210 85% 60%;
+    --primary-glow: 195 100% 70%;
 
-    /* Secondary - Soft cream/beige */
-    --secondary: 40 25% 94%;
-    --secondary-foreground: 215 25% 15%;
+    /* Secondary - Warm beige (#F5F5DC) */
+    --secondary: 43 37% 92%;
+    --secondary-foreground: 140 20% 15%;
 
     /* Muted tones */
-    --muted: 210 15% 92%;
-    --muted-foreground: 215 15% 45%;
+    --muted: 43 20% 90%;
+    --muted-foreground: 140 15% 45%;
 
-    /* Accent - Sunset orange */
-    --accent: 25 85% 60%;
+    /* Accent - Deep green (#006400) */
+    --accent: 120 100% 20%;
     --accent-foreground: 0 0% 100%;
 
     /* Status colors */
@@ -53,16 +53,16 @@ All colors MUST be HSL.
 
     --radius: 0.75rem;
 
-    /* Travel-themed gradients */
-    --gradient-sky: linear-gradient(135deg, hsl(210 85% 45%), hsl(210 85% 60%));
-    --gradient-sunset: linear-gradient(135deg, hsl(25 85% 60%), hsl(35 80% 65%));
-    --gradient-hero: linear-gradient(135deg, hsl(210 85% 45%) 0%, hsl(25 85% 60%) 100%);
-    --gradient-soft: linear-gradient(180deg, hsl(210 20% 98%), hsl(210 25% 96%));
+    /* Travel + Evans premium gradients */
+    --gradient-sky: linear-gradient(135deg, hsl(195 100% 50%), hsl(195 100% 70%));
+    --gradient-earth: linear-gradient(135deg, hsl(120 100% 20%), hsl(140 60% 35%));
+    --gradient-hero: linear-gradient(135deg, hsl(195 100% 50%) 0%, hsl(120 100% 20%) 100%);
+    --gradient-soft: linear-gradient(180deg, hsl(43 37% 97%), hsl(43 30% 94%));
 
-    /* Shadows with travel theme */
-    --shadow-soft: 0 4px 20px -8px hsl(210 85% 45% / 0.15);
-    --shadow-elegant: 0 10px 40px -12px hsl(210 85% 45% / 0.25);
-    --shadow-glow: 0 0 30px hsl(210 85% 60% / 0.3);
+    /* Premium shadows */
+    --shadow-soft: 0 4px 20px -8px hsl(195 100% 50% / 0.15);
+    --shadow-elegant: 0 10px 40px -12px hsl(195 100% 50% / 0.25);
+    --shadow-glow: 0 0 30px hsl(195 100% 70% / 0.3);
 
     /* Animation variables */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -130,18 +130,19 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground font-sans antialiased;
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
   }
 }
 
 @layer components {
-  /* Travel-themed component styles */
+  /* Travel + Evans component styles */
   .gradient-sky {
     background: var(--gradient-sky);
   }
   
-  .gradient-sunset {
-    background: var(--gradient-sunset);
+  .gradient-earth {
+    background: var(--gradient-earth);
   }
   
   .gradient-hero {
@@ -172,7 +173,7 @@ All colors MUST be HSL.
     transition: var(--transition-bounce);
   }
 
-  /* Button variants for travel theme */
+  /* Button variants for Travel + Evans */
   .btn-travel {
     @apply gradient-sky text-white font-semibold py-4 px-8 rounded-xl shadow-soft hover:shadow-elegant transition-smooth transform hover:scale-105;
   }
@@ -182,7 +183,16 @@ All colors MUST be HSL.
   }
   
   .btn-accent {
-    @apply gradient-sunset text-white font-semibold py-4 px-8 rounded-xl shadow-soft hover:shadow-elegant transition-smooth transform hover:scale-105;
+    @apply gradient-earth text-white font-semibold py-4 px-8 rounded-xl shadow-soft hover:shadow-elegant transition-smooth transform hover:scale-105;
+  }
+  
+  /* Typography styles */
+  .font-display {
+    font-family: 'Playfair Display', Georgia, serif;
+  }
+  
+  .text-display {
+    @apply font-display font-bold;
   }
 
   /* Card styles */
